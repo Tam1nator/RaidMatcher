@@ -70,7 +70,7 @@ def check_clan_search_channel(interaction):
         app_commands.Choice(name="Professional", value="Professional")
     ],
     clan_tag=[
-        app_commands.Choice(name="Placeholder 1", value="Placeholder 1"),
+        app_commands.Choice(name="Lost F2P", value="Placeholder 1"),
         app_commands.Choice(name="Placeholder 2", value="Placeholder 2"),
         app_commands.Choice(name="Placeholder 3", value="Placeholder 3"),
         app_commands.Choice(name="Placeholder 4", value="Placeholder 4"),
