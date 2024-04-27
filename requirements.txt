@@ -1,3 +1,4 @@
+Python==3.10.11
 Flask==3.0.0
 Werkzeug==3.0.1
-discord.py==2.4.0a5006+g8fd1fd80
+discord.py==1.7.3
