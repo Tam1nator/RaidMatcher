@@ -107,6 +107,7 @@ async def open_raid_post(
     embed.add_field(name="Contact", value=contact, inline=False)
     embed.add_field(name="CG Donation", value=cg_donation, inline=False)
     embed.add_field(name="Additional Info", value=extra_info, inline=False)
+    embed.set_footer(text="Made by MCG Student")
     await interaction.response.send_message(embed=embed)
 
 @app_commands.guilds(discord.Object(id=1213279065306431588))
@@ -145,6 +146,7 @@ async def raid_service_post(
     embed.add_field(name="CG Donation", value=cg_donation, inline=False)
     embed.add_field(name="Additional Info", value=extra_info, inline=False)
     embed.add_field(name="Number of Accounts", value=str(number_of_accounts), inline=False)
+    embed.set_footer(text="Made by MCG Student")
     await interaction.response.send_message(embed=embed)
 
 @app_commands.guilds(discord.Object(id=1213279065306431588))
@@ -167,6 +169,7 @@ async def stadtgold(interaction: discord.Interaction):
         url="https://link.clashofclans.com/de?action=OpenClanProfile&tag=2GJR8RJGC",
         color=discord.Color.green()
     )
+    embed.set_footer(text="Made by MCG Student")
     await interaction.response.send_message(embed=embed)
 
 # Flask route definitions
