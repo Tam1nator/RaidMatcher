@@ -69,6 +69,15 @@ def check_clan_search_channel(interaction):
         app_commands.Choice(name="Experienced", value="Experienced"),
         app_commands.Choice(name="Professional", value="Professional")
     ],
+    clan_tag=[
+        app_commands.Choice(name="Placeholder 1", value="Placeholder 1"),
+        app_commands.Choice(name="Placeholder 2", value="Placeholder 2"),
+        app_commands.Choice(name="Placeholder 3", value="Placeholder 3"),
+        app_commands.Choice(name="Placeholder 4", value="Placeholder 4"),
+        app_commands.Choice(name="Placeholder 5", value="Placeholder 5"),
+        app_commands.Choice(name="Placeholder 6", value="Placeholder 6"),
+        app_commands.Choice(name="Placeholder 7", value="Placeholder 7")
+    ],
     cg_donation=[
         app_commands.Choice(name="0%", value="0%"),
         app_commands.Choice(name="25%", value="25%"),
@@ -97,6 +106,66 @@ async def open_raid_post(
     embed.add_field(name="Contact", value=contact, inline=False)
     embed.add_field(name="CG Donation", value=cg_donation, inline=False)
     embed.add_field(name="Additional Info", value=extra_info, inline=False)
+    await interaction.response.send_message(embed=embed)
+
+@app_commands.guilds(discord.Object(id=1213279065306431588))
+@bot.tree.command(name="raid_service_post", description="Create a Raid Service post")
+@app_commands.choices(
+    skill_level=[
+        app_commands.Choice(name="Amateur", value="Amateur"),
+        app_commands.Choice(name="Experienced", value="Experienced"),
+        app_commands.Choice(name="Professional", value="Professional")
+    ],
+    cg_donation=[
+        app_commands.Choice(name="0%", value="0%"),
+        app_commands.Choice(name="25%", value="25%"),
+        app_commands.Choice(name="50%", value="50%"),
+        app_commands.Choice(name="75%", value="75%"),
+        app_commands.Choice(name="100%", value="100%")
+    ]
+)
+async def raid_service_post(
+    interaction: discord.Interaction,
+    player_tag: str,
+    skill_level: str,
+    contact: str,
+    cg_donation: str,
+    extra_info: str = "No",
+    number_of_accounts: int = 1
+):
+    if not check_clan_search_channel(interaction):
+        await interaction.response.send_message("This command is not allowed in this channel.")
+        return
+
+    embed = discord.Embed(title="Raid Service - Player looking for Clan", color=discord.Color.gold())
+    embed.add_field(name="Player Tag", value=player_tag, inline=False)
+    embed.add_field(name="Skill Level", value=skill_level, inline=False)
+    embed.add_field(name="Contact", value=contact, inline=False)
+    embed.add_field(name="CG Donation", value=cg_donation, inline=False)
+    embed.add_field(name="Additional Info", value=extra_info, inline=False)
+    embed.add_field(name="Number of Accounts", value=str(number_of_accounts), inline=False)
+    await interaction.response.send_message(embed=embed)
+
+@app_commands.guilds(discord.Object(id=1213279065306431588))
+@bot.tree.command(name="bot_config", description="Konfiguration für RaidMatcher")
+async def bot_config(interaction: discord.Interaction, clan_name: str, clan_tag: str):
+    # Überprüfen, ob der Nutzer die notwendigen Bedingungen erfüllt
+    if not is_special_user(interaction):
+        # Senden einer Fehlermeldung, wenn der Nutzer nicht autorisiert ist
+        await interaction.response.send_message("Dieser Command kann nur von einem speziellen Nutzer mit Adminrechten ausgeführt werden.", ephemeral=True)
+        return
+    # Command ausführen, wenn die Überprüfung erfolgreich war
+    await interaction.response.send_message(f"Command ausgeführt für Clan {clan_name} mit Tag {clan_tag}.")
+
+@app_commands.guilds(discord.Object(id=1213279065306431588))  # Set your guild ID(s) here
+@bot.tree.command(name="stadtgold", description="Information über Stadtgold Spenden im Clan")
+async def stadtgold(interaction: discord.Interaction):
+    embed = discord.Embed(
+        title="Stadtgold Spenden",
+        description="Es gibt keine Pflicht, wo du dein Stadtgold spenden musst. Trotzdem würden wir uns darüber freuen, wenn du dein Stadtgold im Clan MCG lässt.\n**#2GJR8RJGC; Clanlevel 7; grün-weißes Wappen**",
+        url="https://link.clashofclans.com/de?action=OpenClanProfile&tag=2GJR8RJGC",
+        color=discord.Color.green()
+    )
     await interaction.response.send_message(embed=embed)
 
 # Flask route definitions
