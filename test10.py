@@ -149,7 +149,7 @@ async def raid_service_post(
     embed.set_footer(text="Made by MCG Student")
     await interaction.response.send_message(embed=embed)
 
-@app_commands.guilds(discord.Object(id=1213279065306431588))
+'''@app_commands.guilds(discord.Object(id=1213279065306431588))
 @bot.tree.command(name="bot_config", description="Konfiguration für RaidMatcher")
 async def bot_config(interaction: discord.Interaction, clan_name: str, clan_tag: str):
     # Überprüfen, ob der Nutzer die notwendigen Bedingungen erfüllt
@@ -159,7 +159,7 @@ async def bot_config(interaction: discord.Interaction, clan_name: str, clan_tag:
         return
     # Command ausführen, wenn die Überprüfung erfolgreich war
     await interaction.response.send_message(f"Command ausgeführt für Clan {clan_name} mit Tag {clan_tag}.")
-
+'''
 @app_commands.guilds(discord.Object(id=1213279065306431588))  # Set your guild ID(s) here
 @bot.tree.command(name="stadtgold", description="Information über Stadtgold Spenden im Clan")
 async def stadtgold(interaction: discord.Interaction):
