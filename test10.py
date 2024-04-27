@@ -194,4 +194,6 @@ if __name__ == "__main__":
     bot_thread = threading.Thread(target=run_discord_bot, daemon=True)
     bot_thread.start()
     # Running the Flask app
-    app.run(port=8000, debug=True)
+    # Running the Flask app
+    app.run(host='0.0.0.0', port=8000, debug=True)
+
