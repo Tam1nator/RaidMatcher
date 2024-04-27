@@ -70,13 +70,14 @@ def check_clan_search_channel(interaction):
         app_commands.Choice(name="Professional", value="Professional")
     ],
     clan_tag=[
-        app_commands.Choice(name="Lost F2P", value="Placeholder 1"),
-        app_commands.Choice(name="Placeholder 2", value="Placeholder 2"),
-        app_commands.Choice(name="Placeholder 3", value="Placeholder 3"),
-        app_commands.Choice(name="Placeholder 4", value="Placeholder 4"),
-        app_commands.Choice(name="Placeholder 5", value="Placeholder 5"),
-        app_commands.Choice(name="Placeholder 6", value="Placeholder 6"),
-        app_commands.Choice(name="Placeholder 7", value="Placeholder 7")
+        app_commands.Choice(name="Lost F2P", value="Lost F2P #2820UPPQC"),
+        app_commands.Choice(name="Lost F2P 2", value="Lost F2P 2 #2LG222Q0L"),
+        app_commands.Choice(name="Lost 3", value="Lost 3 #2YUPV0UYC"),
+        app_commands.Choice(name="Lost 4", value="Lost 4 #2LU2V2LPU"),
+        app_commands.Choice(name="Lost 5", value="Lost 5 #2QC0QQPQ2"),
+        app_commands.Choice(name="Lost 6", value="Lost 6 #2YVPC20UY"),
+        app_commands.Choice(name="Lost 7", value="Lost 7 #2QQ29JCYV"),
+        app_commands.Choice(name="MCG", value="MCG #2GJR8RJGC")
     ],
     cg_donation=[
         app_commands.Choice(name="0%", value="0%"),
