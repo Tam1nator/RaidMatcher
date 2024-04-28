@@ -77,6 +77,7 @@ def check_clan_search_channel(interaction):
         app_commands.Choice(name="Lost 5", value="Lost 5 #2QC0QQPQ2"),
         app_commands.Choice(name="Lost 6", value="Lost 6 #2YVPC20UY"),
         app_commands.Choice(name="Lost 7", value="Lost 7 #2QQ29JCYV"),
+        app_commands.Choice(name="Lost GP", value="Lost GP #2YVJV8VC0"),
         app_commands.Choice(name="MCG", value="MCG #2GJR8RJGC")
     ],
     cg_donation=[
