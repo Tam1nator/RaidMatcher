@@ -186,7 +186,7 @@ def home():
 # Function to run the Discord bot
 def run_discord_bot():
     try:
-        bot.run('MTIzMzQyNjEzMTU4NDAyODY4Mg.GWnwM7.KRMxEED0G60HeEol04UDvkzIGCU5-RkbCnt_oo')  # Replace 'YOUR_BOT_TOKEN' with your actual Discord bot token.
+        bot.run('YOUR_BOT_TOKEN')  # Replace 'YOUR_BOT_TOKEN' with your actual Discord bot token.
     except Exception as e:
         global bot_running, bot_error_message
         bot_running = False
